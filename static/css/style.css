@@ -1,11 +1,9 @@
-/* Reset some defaults */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body + background tile (repeat) */
 body {
   font-family: 'Roboto Mono', monospace;
   background: url('../images/banner.png') repeat;
@@ -16,11 +14,11 @@ body {
 
 section {
   background-color: #1A1A1A;
+  background-color: rgba(26, 26, 26, 0.8);
   padding: 60px 20px;
   min-height: 100vh;
 }
 
-/* Banner */
 #banner {
   position: relative;
   background: url('../images/banner.png') center / cover no-repeat;
@@ -45,7 +43,9 @@ section {
 }
 
 .content-box {
-  max-width: 800px;
+  background-color: #1A1A1A;
+  max-width: 1100px;
+  border: #D64C2B 2px solid;
   margin: 0 auto;
   padding: 30px;
   border-radius: 16px;
