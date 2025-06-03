@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for
 from flask_frozen import Freezer
 
 app = Flask(__name__)
-freezer = Freezer(app, with_static_file=True)
+freezer = Freezer(app)
 app.config['FREEZER_DESTINATION'] = 'output'
 app.config['FREEZER_RELATIVE_URLS'] = True
 
