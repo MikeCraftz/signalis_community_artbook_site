@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: url('../images/banner.png') repeat;
+  color: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+
+section {
+  background-color: #1A1A1A;
+  background-color: rgba(26, 26, 26, 0.8);
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+#banner {
+  position: relative;
+  background: url('../images/banner.png') center / cover no-repeat;
+  height: 50vh;
+}
+#banner .banner-overlay {
+  background-color: rgba(26, 26, 26, 0.7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#banner h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+#banner p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.content-box {
+  background-color: #1A1A1A;
+  max-width: 1100px;
+  border: #D64C2B 2px solid;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.content-box h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-bottom: 2px solid #D64C2B;
+  display: inline-block;
+}
+.content-box h3 {
+  color: #D64C2B;
+}
+.content-box p,
+.content-box a {
+  line-height: 1.6;
+}
+.content-box a {
+  color: #D64C2B;
+  text-decoration: none;
+}
+.content-box a:hover {
+  text-decoration: underline;
+}
+
+.grid-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+.thumb-container {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.thumb-container img.thumb {
+  width: 100%;
+  border: 2px solid #D64C2B;
+  transition: transform 0.3s;
+}
+.thumb-container img.thumb:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(26, 26, 26, 0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-close:hover {
+  color: #D64C2B;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #banner h1 {
+    font-size: 2rem;
+  }
+  #banner p {
+    font-size: 1rem;
+  }
+  .grid-3x3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .grid-3x3 {
+    grid-template-columns: 1fr;
+  }
+}
