@@ -12,6 +12,37 @@
     />
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script>
+    function showFullImage(el) {
+        const fullSrc = el.getAttribute('data-full');
+        document.getElementById('full-image').src = fullSrc;
+        document.getElementById('image-viewer').style.display = 'flex';
+    }
+
+    function hideViewer() {
+        document.getElementById('image-viewer').style.display = 'none';
+        document.getElementById('full-image').src = '';
+    }
+    </script>
+    
+    <style>
+    #image-viewer {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: zoom-out;
+        z-index: 9999;
+    }
+    #image-viewer img {
+        max-width: 90%;
+        max-height: 90%;
+        box-shadow: 0 0 20px #000;
+    }
+</style>
 </head>
 <body>
     <section id="banner">
@@ -158,25 +189,25 @@
     </section>
 
     <section id="samples">
-        <div class="content-box">
-            <h2>Sample Book Pages</h2>
-            <p>
-                Below are sample pages from the artbook. These are not final and may change as we finalize the book.
-                Click on any image to view it in full size.
-            </p>
-            <div class="grid-3x3">
-                {% for i in range(1,16) %}
-                <div class="thumb-container">
-                    <img
-                      src="{{ url_for('static', filename='images/sample' ~ i ~ '.png') }}"
-                      alt="Sample page {{ i }}"
-                      class="thumb"
-                      data-full="{{ url_for('static', filename='images/sample' ~ i ~ '.png') }}"
-                    />
-                </div>
-                {% endfor %}
+    <div class="content-box">
+        <h2>Sample Book Pages</h2>
+        <p>
+        Below are sample pages from the artbook. These are not final and may change as we finalise the book.
+        Click on any image to view it in full size.
+        </p>
+        <div class="grid-3x3">
+        {% for i in range(1, 16) %}
+            <div class="thumb-container">
+                <img
+                    src="{{ url_for('static', filename='images/sample' ~ i ~ '-min.png') }}"
+                    alt="Sample page {{ i }}"
+                    class="thumb"
+                    data-full="{{ url_for('static', filename='images/sample' ~ i ~ '.png') }}"
+                />
             </div>
+        {% endfor %}
         </div>
+    </div>
     </section>
     <section id="credits">
         <div class="content-box">
@@ -231,5 +262,8 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="image-viewer" style="display:none;" onclick="hideViewer()">
+        <img id="full-image" src="" alt="Full view">
+    </div>
 </body>
 </html>

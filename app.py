@@ -16,3 +16,7 @@ if __name__ == "__main__":
         freezer.freeze()
     else:
         app.run(debug=True)
+
+@freezer.register_generator
+def static():
+    yield '/static/images/'
