@@ -12,6 +12,37 @@
     />
 
     <link rel="stylesheet" href="static/css/style.css" />
+    <script>
+    function showFullImage(el) {
+        const fullSrc = el.getAttribute('data-full');
+        document.getElementById('full-image').src = fullSrc;
+        document.getElementById('image-viewer').style.display = 'flex';
+    }
+
+    function hideViewer() {
+        document.getElementById('image-viewer').style.display = 'none';
+        document.getElementById('full-image').src = '';
+    }
+    </script>
+    
+    <style>
+    #image-viewer {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: zoom-out;
+        z-index: 9999;
+    }
+    #image-viewer img {
+        max-width: 90%;
+        max-height: 90%;
+        box-shadow: 0 0 20px #000;
+    }
+</style>
 </head>
 <body>
     <section id="banner">
@@ -158,151 +189,151 @@
     </section>
 
     <section id="samples">
-        <div class="content-box">
-            <h2>Sample Book Pages</h2>
-            <p>
-                Below are sample pages from the artbook. These are not final and may change as we finalize the book.
-                Click on any image to view it in full size.
-            </p>
-            <div class="grid-3x3">
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample1.png"
-                      alt="Sample page 1"
-                      class="thumb"
-                      data-full="static/images/sample1.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample2.png"
-                      alt="Sample page 2"
-                      class="thumb"
-                      data-full="static/images/sample2.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample3.png"
-                      alt="Sample page 3"
-                      class="thumb"
-                      data-full="static/images/sample3.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample4.png"
-                      alt="Sample page 4"
-                      class="thumb"
-                      data-full="static/images/sample4.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample5.png"
-                      alt="Sample page 5"
-                      class="thumb"
-                      data-full="static/images/sample5.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample6.png"
-                      alt="Sample page 6"
-                      class="thumb"
-                      data-full="static/images/sample6.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample7.png"
-                      alt="Sample page 7"
-                      class="thumb"
-                      data-full="static/images/sample7.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample8.png"
-                      alt="Sample page 8"
-                      class="thumb"
-                      data-full="static/images/sample8.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample9.png"
-                      alt="Sample page 9"
-                      class="thumb"
-                      data-full="static/images/sample9.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample10.png"
-                      alt="Sample page 10"
-                      class="thumb"
-                      data-full="static/images/sample10.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample11.png"
-                      alt="Sample page 11"
-                      class="thumb"
-                      data-full="static/images/sample11.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample12.png"
-                      alt="Sample page 12"
-                      class="thumb"
-                      data-full="static/images/sample12.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample13.png"
-                      alt="Sample page 13"
-                      class="thumb"
-                      data-full="static/images/sample13.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample14.png"
-                      alt="Sample page 14"
-                      class="thumb"
-                      data-full="static/images/sample14.png"
-                    />
-                </div>
-                
-                <div class="thumb-container">
-                    <img
-                      src="static/images/sample15.png"
-                      alt="Sample page 15"
-                      class="thumb"
-                      data-full="static/images/sample15.png"
-                    />
-                </div>
-                
+    <div class="content-box">
+        <h2>Sample Book Pages</h2>
+        <p>
+        Below are sample pages from the artbook. These are not final and may change as we finalise the book.
+        Click on any image to view it in full size.
+        </p>
+        <div class="grid-3x3">
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample1-min.png"
+                    alt="Sample page 1"
+                    class="thumb"
+                    data-full="static/images/sample1.png"
+                />
             </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample2-min.png"
+                    alt="Sample page 2"
+                    class="thumb"
+                    data-full="static/images/sample2.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample3-min.png"
+                    alt="Sample page 3"
+                    class="thumb"
+                    data-full="static/images/sample3.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample4-min.png"
+                    alt="Sample page 4"
+                    class="thumb"
+                    data-full="static/images/sample4.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample5-min.png"
+                    alt="Sample page 5"
+                    class="thumb"
+                    data-full="static/images/sample5.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample6-min.png"
+                    alt="Sample page 6"
+                    class="thumb"
+                    data-full="static/images/sample6.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample7-min.png"
+                    alt="Sample page 7"
+                    class="thumb"
+                    data-full="static/images/sample7.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample8-min.png"
+                    alt="Sample page 8"
+                    class="thumb"
+                    data-full="static/images/sample8.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample9-min.png"
+                    alt="Sample page 9"
+                    class="thumb"
+                    data-full="static/images/sample9.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample10-min.png"
+                    alt="Sample page 10"
+                    class="thumb"
+                    data-full="static/images/sample10.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample11-min.png"
+                    alt="Sample page 11"
+                    class="thumb"
+                    data-full="static/images/sample11.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample12-min.png"
+                    alt="Sample page 12"
+                    class="thumb"
+                    data-full="static/images/sample12.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample13-min.png"
+                    alt="Sample page 13"
+                    class="thumb"
+                    data-full="static/images/sample13.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample14-min.png"
+                    alt="Sample page 14"
+                    class="thumb"
+                    data-full="static/images/sample14.png"
+                />
+            </div>
+        
+            <div class="thumb-container">
+                <img
+                    src="static/images/sample15-min.png"
+                    alt="Sample page 15"
+                    class="thumb"
+                    data-full="static/images/sample15.png"
+                />
+            </div>
+        
         </div>
+    </div>
     </section>
     <section id="credits">
         <div class="content-box">
@@ -357,5 +388,8 @@
     </div>
 
     <script src="static/js/script.js"></script>
+    <div id="image-viewer" style="display:none;" onclick="hideViewer()">
+        <img id="full-image" src="" alt="Full view">
+    </div>
 </body>
 </html>
