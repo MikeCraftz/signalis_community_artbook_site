@@ -11,12 +11,11 @@ body {
   scroll-behavior: smooth;
 }
 
-
 section {
   background-color: #1A1A1A;
   background-color: rgba(26, 26, 26, 0.8);
   padding: 60px 20px;
-  min-height: 100vh;
+  min-height: 50px;
 }
 
 #banner {
@@ -123,7 +122,22 @@ section {
   color: #D64C2B;
 }
 
-/* Responsive tweaks */
+.subscribe-btn {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #D64C2B;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #D64C2B;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.subscribe-btn:hover {
+  background-color: #D64C2B;
+}
+
 @media (max-width: 768px) {
   #banner h1 {
     font-size: 2rem;

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   modalClose.addEventListener("click", function () {
     modal.style.display = "none";
-    modalImg.src = ""; // Clear src
+    modalImg.src = "";
   });
 
   modal.addEventListener("click", function (e) {
