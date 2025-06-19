@@ -138,6 +138,90 @@ section {
   background-color: #D64C2B;
 }
 
+#boot-screen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 255, 0, 0.03) 1px,
+    rgba(0, 0, 0, 0) 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+#boot-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #33ff33;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: black;
+  color: #33ff33;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33;
+  animation: flicker 0.15s infinite;
+  line-height: 1.4;
+}
+
+#boot-text {
+  filter: blur(0.2px);
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.boot-fade-out {
+  animation: boot-slide-up 2s forwards;
+}
+
+#boot-continue {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  color: #33ff33;
+  text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33;
+  display: none;
+  animation: blink 1s step-start infinite;
+}
+
+#boot-continue .dot {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes boot-slide-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.98; }
+  80%  { opacity: 0.97; }
+  100% { opacity: 1; }
+}
+
 @media (max-width: 768px) {
   #banner h1 {
     font-size: 2rem;
