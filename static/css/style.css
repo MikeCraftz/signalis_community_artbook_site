@@ -23,6 +23,7 @@ section {
   background: url('../images/banner.png') center / cover no-repeat;
   height: 50vh;
 }
+
 #banner .banner-overlay {
   background-color: rgba(26, 26, 26, 0.7);
   height: 100%;
@@ -32,10 +33,12 @@ section {
   align-items: center;
   text-align: center;
 }
+
 #banner h1 {
   font-size: 3rem;
   letter-spacing: 2px;
 }
+
 #banner p {
   margin-top: 10px;
   font-size: 1.2rem;
@@ -56,17 +59,21 @@ section {
   border-bottom: 2px solid #D64C2B;
   display: inline-block;
 }
+
 .content-box h3 {
   color: #D64C2B;
 }
+
 .content-box p,
 .content-box a {
   line-height: 1.6;
 }
+
 .content-box a {
   color: #D64C2B;
   text-decoration: none;
 }
+
 .content-box a:hover {
   text-decoration: underline;
 }
@@ -77,16 +84,19 @@ section {
   gap: 15px;
   margin-top: 20px;
 }
+
 .thumb-container {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
+
 .thumb-container img.thumb {
   width: 100%;
   border: 2px solid #D64C2B;
   transition: transform 0.3s;
 }
+
 .thumb-container img.thumb:hover {
   transform: scale(1.05);
 }
@@ -103,12 +113,14 @@ section {
   overflow: auto;
   background-color: rgba(26, 26, 26, 0.9);
 }
+
 .modal-content {
   margin: auto;
   display: block;
   max-width: 90%;
   max-height: 80vh;
 }
+
 .modal-close {
   position: absolute;
   top: 20px;
@@ -118,6 +130,7 @@ section {
   font-weight: bold;
   cursor: pointer;
 }
+
 .modal-close:hover {
   color: #D64C2B;
 }
@@ -142,15 +155,118 @@ section {
   #banner h1 {
     font-size: 2rem;
   }
+
   #banner p {
     font-size: 1rem;
   }
+
   .grid-3x3 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media (max-width: 480px) {
   .grid-3x3 {
     grid-template-columns: 1fr;
+  }
+}
+
+#boot-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #FFFFFF;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF;
+  animation: flicker 0.15s infinite;
+  line-height: 1.5;
+}
+
+#boot-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 90%;
+  filter: blur(0.2px);
+}
+
+#boot-continue {
+  display: none;
+  background: black;
+  font-family: "Courier New", monospace;
+  color: #D64C2B;
+  text-shadow: 0 0 5px #D64C2B, 0 0 10px #D64C2B;
+  font-size: 1rem;
+  animation: blink 1s step-start infinite;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.boot-fade-out {
+  animation: boot-slide-up 1.5s forwards;
+}
+
+@keyframes boot-slide-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.97;
+  }
+
+  75% {
+    opacity: 0.98;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.boot-fade-out {
+  animation: boot-fade 1s forwards;
+}
+
+@keyframes boot-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
