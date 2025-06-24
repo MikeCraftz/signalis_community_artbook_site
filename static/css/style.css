@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
-  background: url('../images/banner.png') repeat;
+  background: url('../images/background-banner.png');
   color: #FFFFFF;
   scroll-behavior: smooth;
 }
@@ -20,7 +20,7 @@ section {
 
 #banner {
   position: relative;
-  background: url('../images/banner.png') center / cover no-repeat;
+  background: url('../images/banner.png') center / cover ;
   height: 50vh;
 }
 #banner .banner-overlay {
@@ -42,9 +42,9 @@ section {
 }
 
 .content-box {
-  background-color: #1A1A1A;
+  background-color: #042D36;
   max-width: 1100px;
-  border: #D64C2B 2px solid;
+  border: #1c4586 2px solid;
   margin: 0 auto;
   padding: 30px;
   border-radius: 16px;
@@ -53,18 +53,18 @@ section {
 .content-box h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-  border-bottom: 2px solid #D64C2B;
+  border-bottom: 2px solid #2897ad;
   display: inline-block;
 }
 .content-box h3 {
-  color: #D64C2B;
+  color: #2897ad;
 }
 .content-box p,
 .content-box a {
   line-height: 1.6;
 }
 .content-box a {
-  color: #D64C2B;
+  color: #2897ad;
   text-decoration: none;
 }
 .content-box a:hover {
@@ -84,7 +84,7 @@ section {
 }
 .thumb-container img.thumb {
   width: 100%;
-  border: 2px solid #D64C2B;
+  border: 2px solid #1c4586;
   transition: transform 0.3s;
 }
 .thumb-container img.thumb:hover {
@@ -119,23 +119,23 @@ section {
   cursor: pointer;
 }
 .modal-close:hover {
-  color: #D64C2B;
+  color: #1c4586;
 }
 
 .subscribe-btn {
   font-family: 'Roboto Mono', monospace;
-  background-color: #D64C2B;
+  background-color: #1c4586;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  border: 2px solid #D64C2B;
+  border: 2px solid #1c4586;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .subscribe-btn:hover {
-  background-color: #D64C2B;
+  background-color: #1c4586;
 }
 
 #boot-screen::before {
