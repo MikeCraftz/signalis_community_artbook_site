@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
-  background: url('../images/banner.png') repeat;
+  background: url('../images/bg_parade.png');
   color: #FFFFFF;
   scroll-behavior: smooth;
 }
@@ -20,7 +20,7 @@ section {
 
 #banner {
   position: relative;
-  background: url('../images/banner.png') center / cover no-repeat;
+  background: url('../images/banner.png') center / cover;
   height: 50vh;
 }
 
@@ -199,6 +199,9 @@ section {
   word-break: break-word;
   max-width: 90%;
   filter: blur(0.2px);
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 #boot-continue {
