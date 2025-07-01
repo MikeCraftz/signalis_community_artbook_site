@@ -43,10 +43,37 @@
             max-height: 90%;
             box-shadow: 0 0 20px #000;
         }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        #planet-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #1A1A1A;
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: top 1.5s ease-in-out;
+        }
+
+        #planet-canvas {
+            max-width: 100vmin;
+            max-height: 100vmin;
+            aspect-ratio: 1 / 1;
+        }
     </style>
 </head>
 
 <body>
+    <div id="planet-screen">
+        <canvas id="planet-canvas"></canvas>
+    </div>
     <div id="boot-screen">
         <pre id="boot-text"></pre>
         <div id="boot-continue">Click anywhere to continue<span class="dot">.</span></div>
@@ -73,18 +100,18 @@
         <div class="content-box">
             <h2>About The Game</h2>
             <p>
-                SIGNALIS is a survival horror game developed by Rose‐Engine. It combines classic survival horror
-                gameplay with a unique aesthetic and narrative.
+                SIGNALIS is a survival horror game by Rose‐Engine,
+                blending classic mechanics with a distinct visual style and atmospheric storytelling.
             </p>
             <br />
             <p>
                 More information can be found on the <a href="https://rose-engine.org/signalis/"
                     target="_blank">official website</a>
                 The game was released on 27th October 2022. It is available on <span style="color:#FF0000;">PC, Xbox
-                    One, PS4 and Nintendo Switch.</span>.
-                I strongly recommend playing it if you a fan of classic survival horror games like Resident Evil or
-                Silent Hill, or fan
-                of retro aesthetics and anime.
+                    One, PS4 and Nintendo Switch.</span>
+                If you're a fan of old-school survival horror like Resident Evil or Silent Hill, or appreciate retro
+                aesthetics and anime,
+                this game is highly recommended.
             </p>
         </div>
         <br /><br />
@@ -101,9 +128,10 @@
                 Each piece reflects a personal connection: <span style="color:#FF0000;">what the game meant to
                     us</span>, how we interpreted it, and how we chose to express that through art.
 
-                It is more than just an album of art, but with artist interpretations of the game, it is a collection of
-                memories and experiences shared by the community,
-                as well as what brought the artist to create their art.
+                The goal is more than an art collection. It's a memory archive:
+                a collaborative expression of how SIGNALIS resonated with its community.
+
+                Scroll down to see the samples of the book, and how you can contribute to this project!
             </p>
             <br />
             <p>
@@ -116,18 +144,16 @@
             <h2>About The Book</h2>
             <h3>Why is this book special?</h3>
             <p>
-                This handcrafted artbook is designed to look like and in-universe user manual for the game SIGNALIS.
-                Main inspiration for the design is the in-game UI, as well as older game user manuals and artbooks like
-                the Homeworld technical manual.
+                The book is designed to resemble an in-universe technical manual from the SIGNALIS world,
+                inspired by the game’s UI and retro game manuals like Homeworld Technical Manual.
             </p>
             <br />
             <h3>What is in this book?</h3>
-            <p>
-                The book feature pages that are designed to matches the aesthetic of the game.
-                Each artist is to feature their SIGNALIS fanart in this book, together with a monochrome,
-                bakemonogatari-style that describes who they are, with a short description of their art and what it
-                means to them.
-            </p>
+            <ul>
+                <li>Their SIGNALIS fanart</li>
+                <li>A stylized, monochrome profile (inspired by Bakemonogatari)</li>
+                <li>A brief description of their piece and what it means to them</li>
+            </ul>
             <br />
             <h3>Where can I get this book?</h3>
             <p>
@@ -142,10 +168,11 @@
             <br />
             <p>
                 A small number of physical copies will be available for sales as well if I am able to secure a booth
-                space at C107 Winter Comiket 2025, Tokyo, Japan.
-                Any one participated the book as collaborator will be given a physical copy of the book for free.
+                space at <span style="color:#FF0000;">C107 Winter Comiket 2025, Tokyo, Japan.</span>
+
                 All proceeds from the sales will be used to cover printing costs for the book, transportation, booth
                 space and other related costs are covered by me personally.
+
                 However per rose-engine's policies , no online sales of the physical print will be made available, and
                 the print will be a one-off print run.
             </p>
@@ -156,28 +183,56 @@
         </div>
     </section>
 
+    <section id="timeline">
+        <div class="content-box">
+            <h2>Project Timeline</h2>
+            <p>
+                Here's a rough schedule for the SIGNALIS Community Artbook project. Please note that dates may change
+                slightly depending on printing, logistics, and event arrangements.
+            </p>
+            <br />
+            <ul style="font-family: 'Roboto Mono', monospace; line-height: 1.8;">
+                <li><strong>02/06/2025</strong> – Project Announcement</li>
+                <li><strong>03/06/2025</strong> – <span style="color:#FF0000;">Physical print cut-off</span><br />
+                    Artists who apply after this date will be included in the digital version only (subject to change
+                    depending on print budget).</li>
+                <li><strong>04/06/2025</strong> – Project website launched<br />
+                    <a href="https://mikecraftz.github.io/signalis_community_artbook_site/" target="_blank">Visit
+                        project site</a>
+                </li>
+                <li><strong>05/06/2025</strong> – “Signalis: Last Promise” physical print project announced</li>
+                <li><strong>22/06/2025</strong> – Newsletter program launched</li>
+                <li><strong>31/07/2025</strong> – <span style="color:#FF0000;">Application Deadline</span><br />
+                    (This may be extended based on availability)</li>
+                <li><strong>September 2025</strong> – Target production wrap-up</li>
+                <li><strong>12/08/2025</strong> – C107 Winter Comiket application submitted</li>
+                <li><strong>Mid-September 2025</strong> – Final polish and internal review</li>
+                <li><strong>October 2025</strong> – Test print + digital book release</li>
+                <li><strong>November 2025</strong> – Comiket booth lottery result announced<br />
+                    If a booth is secured, small-batch printing will proceed</li>
+                <li><strong>30–31/12/2025</strong> – C107 Winter Comiket<br />
+                    Limited physical sales of the book and the “Last Promise” comic</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="submission">
         <div class="content-box">
             <h2>Submit Your Art</h2>
             <br />
-            <h3>Deadline of application will be 30/7/2025. But you can apply first and submit your art later.</h3>
+            <h3>Deadline of application will be 30/7/2025. But you can apply first and submit your art later. Deadline
+                would be extended if time is allowed.</h3>
             <br />
             <p><span style="color:#0099CE;">Effective on 03/06/2025 1800 JPT,
-                    all application after this point will only be featured in the digital version once accepted.
-                    I am terribly sorry for this, due to high number of submission I have now received more than 50
-                    entries and the book is bulking to more than 100 pages.
-                    Due to printing costs it would not be feasible to print it out fully.
-                    <br />
-                    <br />
-                    But your will be in the final digital version. Again I am really really sorry about this.
+                    Due to overwhelming submissions, new accepted entries will appear in the digital version only.
+                    Thank you for your understanding. This may subject to change base on printing costs and page.
                 </span></p>
             <br />
             <h3>What is the art requirement?</h3>
             <br />
             <p>
             <ul>
-                <li>Up to 5 pieces of art can be submitted, with a maximum of 4 pages per artist, including the artist
-                    introduction page.</li>
+                <li>Up to 5 artworks, maximum 4 pages per artist (including profile page)</li>
                 <li><span style="color:#FF0000;">No unaltered in-game assets, official textures, models, marketing
                         materials, logos, or character sprites from SIGNALIS may be used.</span></li>
                 <li>Please avoid using AI art as submission.</li>
@@ -185,11 +240,8 @@
                     be accepted.</li>
                 <li>You will be credited and acknowledged as a <span style="color:#0099CE;">collaborator/team
                         member</span> of the project.</li>
-                <li>All submitted works must be related to SIGNALIS in theme, character, or aesthetic.</li>
-                <li>Artworks must not depict explicit sexual content, hate speech, or any offensive, obscene, or
-                    disrespectful material.</li>
-                <li>I will do my best to include as much as possible, please understand that due to printing costs and
-                    page limits, not all submissions may be featured in the final book.</li>
+                <li>Must be related to SIGNALIS in theme, characters, or style</li>
+                <li>No explicit, offensive, or disrespectful material</li>
             </ul>
             </p>
             <br />
@@ -197,15 +249,14 @@
             <br />
 
             <ul>
-                <li>Size should not be too large, I prefer it to be able to fit an A4 paper.</li>
-                <li>300 dpi.</li>
-                <li>.png format</li>
+                <li>A4 size preferred</li>
+                <li>300 dpi</li>
+                <li>PNG format</li>
                 <li>Title of your art in format of <span style="color:#0099CE;">"Title", "Month+Year of creation"</span>
                 </li>
                 <li>Short Description / Commentary. Talk about your inspiration, references, or the meaning behind the
                     piece. Or anything about the art pieces!</span></li>
-                <li>I will do my best to include as much as possible, please understand that due to printing costs and
-                    page limits, not all submissions may be featured in the final book.</li>
+                <li>I will do my best to include as much as possible. Please dm me if you have any doubts.</li>
             </ul>
 
             <br />
@@ -213,7 +264,7 @@
             <br />
             <br />
             <p>
-                If you are interested in contributing, please submit your application to the <a
+                If you are interested in contributing, please apply using the <a
                     href="https://forms.gle/h6QHLzRMbZCTyHkm7" target="_blank">application form</a>.
                 <br />
                 <br />
@@ -227,8 +278,6 @@
                     sample.</li>
             </ul>
             <br />
-            Do note that I might not be able to accept all submissions, as I have a limited number of pages available in
-            the book.
             </p>
         </div>
     </section>
@@ -333,6 +382,138 @@
         <img id="full-image" src="" alt="Full view">
     </div>
     <script>
+        const canvas = document.getElementById("planet-canvas");
+        const ctx = canvas.getContext("2d");
+        function resizeCanvas() {
+            const size = Math.min(window.innerWidth, window.innerHeight);
+            canvas.width = size;
+            canvas.height = size;
+        }
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        function drawSystem() {
+            resizeCanvas();
+            const cx = canvas.width / 2;
+            const cy = canvas.height / 2;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.strokeStyle = "#777";
+            for (let x = 0; x < canvas.width; x += 40) {
+                for (let y = 0; y < canvas.height; y += 40) {
+                    ctx.beginPath();
+                    ctx.moveTo(x - 3, y);
+                    ctx.lineTo(x + 3, y);
+                    ctx.moveTo(x, y - 3);
+                    ctx.lineTo(x, y + 3);
+                    ctx.stroke();
+                }
+            }
+
+            ctx.strokeStyle = "#FFF";
+            ctx.fillStyle = "#FFF";
+            ctx.lineWidth = 1;
+            ctx.textAlign = "left";
+            ctx.font = "12px Noto Serif JP Black";
+
+            const orbits = [60, 100, 140, , 160, 180];
+            const labels = ["STERNENKARTE"];
+
+            orbits.forEach((r, i) => {
+                ctx.beginPath();
+                ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                ctx.stroke();
+            });
+
+            ctx.beginPath();
+            ctx.arc(cx, cy, 6, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = "#D64C2B";
+            ctx.fillText("ORBITALE VERTEIDIGUNGSLINIE", cx + 100, cy + 10);
+            ctx.fillStyle = "white";
+            ctx.fillText("FLOTTENANKERPLATZ", cx - 160, cy - 25);
+            ctx.fillText("艦隊錨地", cx - 160, cy - 40);
+
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.arc(cx, cy, 220, -Math.PI / 3, Math.PI / 6, false);
+            ctx.lineTo(cx, cy);
+            ctx.stroke();
+            ctx.fillText("ERWARTETE AKTIVE ZONE DER IMPERIALEN MARINE", cx + 90, cy - 200);
+            ctx.fillText("帝國海軍活動區域", cx + 90, cy - 185);
+
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.arc(cx, cy, 260, 0, Math.PI / 2, false);
+            ctx.lineTo(cx, cy);
+            ctx.stroke();
+            ctx.fillText("PROJEKT PENROSE – ERSTES ERKUNDUNGSGEBIET", cx + 180, cy + 80);
+            ctx.fillText("潘諾斯計劃初步勘探區", cx + 180, cy + 95);
+            const planets = [
+                { name: "BUYAN", angle: 0.5, orbit: 60, color: "purple" },
+                { name: "KITEZH", angle: 1.2, orbit: 100, color: "#D64C2B" },
+                { name: "VINETA", angle: 2.3, orbit: 140, color: "#0099CE" },
+                { name: "ROTFORNT", angle: 3.4, orbit: 180, color: "red" },
+                { name: "HEIMAT", angle: 4.5, orbit: 160, color: "#D3E62C" },
+                { name: "LENG", angle: 1.4, orbit: 260, color: "white" },
+            ];
+            planets.forEach(p => {
+                const x = cx + Math.cos(p.angle) * p.orbit;
+                const y = cy + Math.sin(p.angle) * p.orbit;
+
+                ctx.beginPath();
+                ctx.fillStyle = p.color;
+                ctx.arc(x, y, 4, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = "white";
+                ctx.font = "12px Noto Serif JP Black";
+                ctx.textAlign = "center";
+                ctx.fillText(p.name, x, y - 10);
+            });;
+
+            ctx.font = "24px Noto Serif JP Black";
+            ctx.fillText("EXTRA SOLAR EXPLORATION PROGRAM. P-12-54/AC STERNENKARTE", 450, 30);
+            ctx.fillText("潘諾斯計劃 / PENROSE-512 星圖", 198, 60);
+
+            ctx.strokeStyle = "#D64C2B";
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(40, canvas.height - 40);
+            ctx.lineTo(200, canvas.height - 40);
+            ctx.stroke();
+
+            ctx.lineWidth = 1;
+            ctx.fillStyle = "white";
+            ctx.font = "14px Noto Serif JP Black";
+            ctx.fillText("P-12-54/AC", 250, canvas.height - 35);
+
+            const labelX = canvas.width - 200;
+            const baseY = canvas.height - 80;
+
+            ctx.font = "24px Noto Serif JP Black";
+            ctx.fillText("VOLKSMARINE", labelX, baseY + 24);
+            ctx.fillText("AEON", labelX, baseY + 52);
+        }
+
+
+        function showStarchart() {
+            return new Promise(resolve => {
+                drawSystem();
+                const screen = document.getElementById("planet-screen");
+                screen.style.top = "0";
+
+                setTimeout(() => {
+                    screen.style.transition = "top 5s ease-in-out";
+                    screen.style.top = "-100vh";
+                    setTimeout(resolve, 5000);
+                }, 3000);
+            });
+        }
+    </script>
+    <script>
         const bootLines = [
             "EUSAN-VERBINDUNG WIRD HERGESTELLT",
             "KOMMUNIKATION: VERBINDUNG ZUM KNOTENPUNKT ELSTER-04",
@@ -359,32 +540,42 @@
             ">> BEREIT"
         ];
 
-        const delay = 80;
-        const bootText = document.getElementById("boot-text");
-        const bootContinue = document.getElementById("boot-continue");
-        let lineIndex = 0;
+        async function startBootSequence() {
+            const bootScreen = document.getElementById("boot-screen");
+            const bootText = document.getElementById("boot-text");
+            const bootContinue = document.getElementById("boot-continue");
 
-        function printNextLine() {
-            if (lineIndex < bootLines.length) {
-                bootText.textContent += bootLines[lineIndex] + "\n";
-                lineIndex++;
-                setTimeout(printNextLine, delay);
-            } else {
-                bootText.textContent += "\n";
-                bootContinue.style.display = "block";
+            await showStarchart();
+
+            bootScreen.style.display = "block";
+            let lineIndex = 0;
+            const delay = 80;
+
+            function printNextLine() {
+                if (lineIndex < bootLines.length) {
+                    bootText.textContent += bootLines[lineIndex] + "\n";
+                    lineIndex++;
+                    setTimeout(printNextLine, delay);
+                } else {
+                    bootText.textContent += "\n";
+                    bootContinue.style.display = "block";
+                }
             }
+
+            printNextLine();
         }
 
         window.addEventListener("load", () => {
-            printNextLine();
+            resizeCanvas();
+            startBootSequence();
         });
 
         document.getElementById("boot-screen").addEventListener("click", () => {
-            document.getElementById("boot-screen").classList.add("boot-fade-out");
-            setTimeout(() => {
-                document.getElementById("boot-screen").remove();
-            }, 1500);
+            document.getElementById("boot-screen").style.display = "none";
+            document.body.style.overflow = "auto";
         });
+
+        window.addEventListener("resize", resizeCanvas);
     </script>
 </body>
 
