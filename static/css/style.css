@@ -64,6 +64,12 @@ section {
   color: #D64C2B;
 }
 
+.content-box.with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
 .content-box p,
 .content-box a {
   line-height: 1.6;
