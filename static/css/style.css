@@ -64,12 +64,6 @@ section {
   color: #D64C2B;
 }
 
-.content-box.with-image {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-
 .content-box p,
 .content-box a {
   line-height: 1.6;
@@ -278,4 +272,21 @@ section {
     opacity: 0;
     visibility: hidden;
   }
+}
+
+.substack-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 24px;
+    padding-bottom: 8px;
+}
+.substack-post-embed {
+    min-width: 320px;
+    max-width: 400px;
+    background: #222;
+    border: 2px solid #D64C2B;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
 }
