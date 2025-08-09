@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+h2, h3 {
+    letter-spacing: 1px;
+}
+
+p {
+    line-height: 1.7;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
   background: url('../images/bg_parade.png');
@@ -91,6 +103,12 @@ section {
   overflow: hidden;
 }
 
+.thumb-container img {
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
 .thumb-container img.thumb {
   width: 100%;
   border: 2px solid #D64C2B;
@@ -98,7 +116,8 @@ section {
 }
 
 .thumb-container img.thumb:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 .modal {
